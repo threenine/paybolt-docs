@@ -77,12 +77,11 @@ declare module '@nuxt/schema' {
 
 export default defineAppConfig({
   awesome: {
-    name: 'Nuxt 3 Awesome Starter',
-    description:
-      'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
+    name: 'PayBolt',
+    description: 'C# Bitcoin Lightning Network Client',
     project: {
       links: {
-        github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
+        github: 'https://github.com/threenine/paybolt',
       },
     },
     layout: {
@@ -95,24 +94,23 @@ export default defineAppConfig({
         year: new Date().getFullYear(),
       },
       welcome: {
-        title: 'Nuxt&nbsp;3 Awesome Starter',
+        title: 'Paybolt',
         disableInfoReplaceIndexInWelcomePage: true,
         primaryActionButton: {
-          title: 'Nuxt 3',
-          to: 'https://nuxt.com/',
+          title: 'Paybolt',
+          to: 'Paybolt',
         },
         secondaryActionButton: {
           title: 'Github',
-          to: 'https://github.com/viandwi24/nuxt3-awesome-starter',
+          to: 'https://github.com/threenine/paybolt',
         },
       },
     },
     author: {
-      name: 'viandwi24',
+      name: 'threenine.co.uk',
       links: {
-        github: 'https://github.com/viandwi24',
-        medium: 'https://viandwi24.medium.com',
-        website: 'https://viandwi24.site',
+        github: 'https://github.com/threenine',
+        website: 'https://threenine.co.uk',
       },
     },
     disableInfoReplaceIndexInWelcomePage: false,

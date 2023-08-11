@@ -3,9 +3,8 @@ import { NuxtAwesomeAppConfig } from './app.config'
 export default defineNuxtSchema({
   appConfig: {
     awesome: {
-      name: 'Nuxt 3 Awesome Starter',
-      description:
-        'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
+      name: 'Paybolt',
+      description: 'Dotnet C# Bitcoin Lightning network client',
       project: {
         links: {
           github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
@@ -21,16 +20,16 @@ export default defineNuxtSchema({
           year: 2023,
         },
         welcome: {
-          title: 'Nuxt&nbsp;3 Awesome Starter',
+          title: 'Paybolt',
           disableInfoReplaceIndexInWelcomePage: true,
         },
       },
       author: {
-        name: 'viandwi24',
+        name: 'threenine.co.uk',
         links: {
-          github: 'https://github.com/viandwi24',
-          medium: 'https://viandwi24.medium.com',
-          website: 'https://viandwi24.site',
+          github: 'https://github.com/threenine',
+          twitter: 'https://twitter/threenine39',
+          website: 'https://threenine.co.uk',
         },
       },
     } as NuxtAwesomeAppConfig,

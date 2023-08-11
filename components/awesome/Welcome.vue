@@ -14,11 +14,7 @@ const showAlert = ref(
 )
 
 const titlesText = computed<string[]>(() =>
-  (
-    awesome?.layout?.welcome?.title ||
-    awesome?.name ||
-    'Nuxt&nbsp;3 Awesome Starter'
-  )
+  (awesome?.layout?.welcome?.title || awesome?.name || '')
     .replaceAll('&nbsp;', '[space]')
     .split(' ')
     .map((item) => item.replaceAll('[space]', ' '))
@@ -65,8 +61,7 @@ const leadingsText = computed(() => [
         </h1>
         <div class="px-4 mt-6 text-center max-w-[500px] md:max-w-[600px]">
           {{
-            awesome?.description ||
-            'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.'
+            awesome?.description
           }}
         </div>
         <div

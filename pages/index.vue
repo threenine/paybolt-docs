@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { awesome } = useAppConfig()
 definePageMeta({ layout: 'page' })
-useHead({ titleTemplate: '', title: awesome?.name || 'Nuxt 3 Awesome Starter' })
+useHead({ titleTemplate: '', title: awesome?.name || 'Cunt' })
 </script>
 
 <template>
