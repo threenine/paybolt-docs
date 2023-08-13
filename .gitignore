@@ -25,3 +25,6 @@ logs
 
 # yarn files
 yarn.lock
+
+# Local Netlify folder
+.netlify

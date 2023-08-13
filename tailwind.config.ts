@@ -4,18 +4,19 @@ import colors from 'tailwindcss/colors'
 
 const PayBolt = {
   colors: {
-    green: {
-      DEFAULT: '#3BA676',
-      '50': '#B4E4CF',
-      '100': '#A5DFC5',
-      '200': '#87D4B2',
-      '300': '#69CA9E',
-      '400': '#4BBF8B',
-      '500': '#3BA676',
-      '600': '#2C7D59',
-      '700': '#1E533B',
-      '800': '#0F2A1E',
-      '900': '#000000',
+    orange: {
+      DEFAULT: '#f97316',
+      '50': '#fff7ed',
+      '100': '#ffedd5',
+      '200': '#fed7aa',
+      '300': '#fdba74',
+      '400': '#fb923c',
+      '500': '#f97316',
+      '600': '#ea580c',
+      '700': '#c2410c',
+      '800': '#9a3412',
+      '900': '#7c2d12',
+      '950': '#431407'
     },
     blue: {
       DEFAULT: '#0096FF',
@@ -65,16 +66,16 @@ export default <Partial<Config>>{
         '8xl': '90rem',
       },
       colors: {
-        primary: PayBolt.colors.green,
+        primary: PayBolt.colors.orange,
         // if want to change primary color to blue
         // primary: MyTheme.colors.blue,
-        green: PayBolt.colors.green,
+        orange: PayBolt.colors.orange,
         blue: PayBolt.colors.blue,
         red: PayBolt.colors.red,
         slate: colors.slate,
       },
       fontFamily: {
-        sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+        sans: ['Raleway', ...defaultTheme.fontFamily.sans],
       },
     },
   },
