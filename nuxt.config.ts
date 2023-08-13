@@ -1,121 +1,81 @@
-import { createResolver } from '@nuxt/kit'
-const { resolve } = createResolver(import.meta.url)
+import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
+import colors from 'tailwindcss/colors'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  // exp
-  experimental: {
-    localLayerAliases: true,
+const PayBolt = {
+  colors: {
+    green: {
+      DEFAULT: '#3BA676',
+      '50': '#B4E4CF',
+      '100': '#A5DFC5',
+      '200': '#87D4B2',
+      '300': '#69CA9E',
+      '400': '#4BBF8B',
+      '500': '#3BA676',
+      '600': '#2C7D59',
+      '700': '#1E533B',
+      '800': '#0F2A1E',
+      '900': '#000000',
+    },
+    blue: {
+      DEFAULT: '#0096FF',
+      '50': '#B8E2FF',
+      '100': '#A3D9FF',
+      '200': '#7AC8FF',
+      '300': '#52B8FF',
+      '400': '#29A7FF',
+      '500': '#0096FF',
+      '600': '#0075C7',
+      '700': '#00548F',
+      '800': '#003357',
+      '900': '#00121F',
+    },
+    red: {
+      DEFAULT: '#FF6464',
+      '50': '#FFFFFF',
+      '100': '#FFFFFF',
+      '200': '#FFDEDE',
+      '300': '#FFB6B6',
+      '400': '#FF8D8D',
+      '500': '#FF6464',
+      '600': '#FF2C2C',
+      '700': '#F30000',
+      '800': '#BB0000',
+      '900': '#830000',
+    },
   },
+}
 
-  // app config
-  app: {
-    // global transition
-    pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' },
-  },
-
-  // typescripts
-  // todo: feat/strict-type-check
-  // typescript: {
-  //   strict: true,
-  //   typeCheck: true,
-  // },
-
-  // modules
-  modules: [
-    // chore
-    // '@nuxtjs/eslint-module',
-    // styling & ui
-    '@nuxtjs/tailwindcss',
-    'nuxt-headlessui',
-    'nuxt-icon',
-    '@nuxtjs/color-mode',
-    // management
-    '@pinia/nuxt',
-    '@vueuse/nuxt',
-    // contents,
-    '@nuxt/content',
-
-    // todo: feat/localization
-    // '@nuxtjs/i18n'
+export default <Partial<Config>>{
+  darkMode: 'class',
+  content: [
+    './components/**/*.{vue,js,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './composables/**/*.{js,ts}',
+    './plugins/**/*.{js,ts}',
+    './App.{js,ts,vue}',
+    './app.{js,ts,vue}',
+    './Error.{js,ts,vue}',
+    './error.{js,ts,vue}',
   ],
-
-  css: [
-    resolve('./assets/scss/_variables.scss'),
-    resolve('./assets/scss/app.scss'),
-  ],
-
-  components: [
-    {
-      prefix: 'Layout',
-      path: resolve('./components/layouts'),
-      global: true,
-    },
-    {
-      prefix: 'Awesome',
-      path: resolve('./components/awesome'),
-      global: true,
-    },
-  ],
-
-  imports: {
-    dirs: [resolve('./stores'), '~/stores'],
-  },
-
-  // module::pinia
-  pinia: {
-    autoImports: [['defineStore', 'definePiniaStore']],
-  },
-
-  // module::headlessui
-  headlessui: {
-    prefix: 'Headless',
-  },
-
-  // module::color-mode
-  colorMode: {
-    classSuffix: '',
-  },
-
-  // module::content
-  content: {
-    documentDriven: true,
-    markdown: {
-      mdc: true,
-    },
-    highlight: {
-      theme: 'github-dark',
+  theme: {
+    extend: {
+      maxWidth: {
+        '8xl': '90rem',
+      },
+      colors: {
+        primary: PayBolt.colors.green,
+        // if want to change primary color to blue
+        // primary: MyTheme.colors.blue,
+        green: PayBolt.colors.green,
+        blue: PayBolt.colors.blue,
+        red: PayBolt.colors.red,
+        slate: colors.slate,
+      },
+      fontFamily: {
+        sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
-
-  // todo: feat/localization
-  // module::i18n
-  // i18n: {
-  //   strategy: 'no_prefix',
-  //   defaultLocale: 'en',
-  //   langDir: 'locales',
-  //   vueI18n: {
-  //     fallbackLocale: 'en',
-  //   },
-  //   detectBrowserLanguage: {
-  //     useCookie: true,
-  //     fallbackLocale: 'en',
-  //     redirectOn: 'root',
-  //   },
-  //   locales: [
-  //     {
-  //       code: 'en', // English
-  //       iso: 'en-US',
-  //       name: 'English',
-  //       file: 'en.yml',
-  //     },
-  //     {
-  //       code: 'id', // Indonesia
-  //       iso: 'id-ID',
-  //       name: 'Indonesia',
-  //       file: 'id.yml',
-  //     }
-  //   ]
-  // },
-})
+}
