@@ -1,11 +1,14 @@
 <script lang="ts" setup>
-import ThemeSwitcher from "~/layouts/theme-switcher.vue";
+import Navbar from "~/components/layout/navbar.vue";
 </script>
 
 <template>
   <div>
+    <navbar/>
 
-    <span class="text-orange text-5xl">PayBolt</span>
+
+
+
 
   </div>
 </template>

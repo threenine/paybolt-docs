@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type {Config} from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 
@@ -50,15 +50,13 @@ const PayBolt = {
 export default <Partial<Config>>{
   darkMode: 'class',
   content: [
-    './components/**/*.{vue,js,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './composables/**/*.{js,ts}',
-    './plugins/**/*.{js,ts}',
-    './App.{js,ts,vue}',
-    './app.{js,ts,vue}',
-    './Error.{js,ts,vue}',
-    './error.{js,ts,vue}',
+    `components/**/*.{vue,js}`,
+    `layouts/**/*.vue`,
+    `pages/**/*.vue`,
+    `composables/**/*.{js,ts}`,
+    `plugins/**/*.{js,ts}`,
+    `App.{js,ts,vue}`,
+    `app.{js,ts,vue}`
   ],
   theme: {
     extend: {
@@ -67,8 +65,6 @@ export default <Partial<Config>>{
       },
       colors: {
         primary: PayBolt.colors.orange,
-        // if want to change primary color to blue
-        // primary: MyTheme.colors.blue,
         orange: PayBolt.colors.orange,
         blue: PayBolt.colors.blue,
         red: PayBolt.colors.red,
@@ -84,5 +80,5 @@ export default <Partial<Config>>{
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
     require('@headlessui/tailwindcss')
-      ]
+  ]
 }

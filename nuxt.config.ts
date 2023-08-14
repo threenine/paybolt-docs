@@ -5,7 +5,7 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules: [ '@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxtjs/color-mode',  'nuxt-headlessui'],
+  modules: [ '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-icon', 'nuxt-headlessui'],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
