@@ -1,9 +1,10 @@
 <template>
-  <div class="flex flex-row items-center justify-center">
+  <div>
     <Icon
       name="uil:sun"
       v-show="colorMode.preference === 'light'"
-      class="theme-icon text-typography_primary_light dark:text-typography_primary_dark text-3xl"
+      class="
+       theme-icon text-typography_primary_light dark:text-typography_primary_dark text-3xl"
       @click="toggleTheme"
     />
     <Icon
