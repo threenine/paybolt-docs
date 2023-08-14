@@ -82,6 +82,7 @@ export default <Partial<Config>>{
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    require('@headlessui/tailwindcss')
       ]
 }
