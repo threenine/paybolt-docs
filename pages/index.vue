@@ -1,16 +1,11 @@
 <script lang="ts" setup>
-import Navbar from "~/components/layout/navbar.vue";
+definePageMeta({ layout: 'default' })
 </script>
 
 <template>
-  <div>
-    <navbar/>
 
+ <h1>hello</h1>
 
-
-
-
-  </div>
 </template>
 
 <style scoped></style>
