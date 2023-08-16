@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+  repo: threenine/paybolt-docs
+publish_mode: editorial_workflow
+site_url: https://paybolt.dev
+logo_url: https://threenine.co.uk/images/threenine_tag.png
+display_url: https://paybolt.dev
+show_preview_links: true
+media_library:
+  name: cloudinary
+  output_filename_only: true
+  config:
+    cloud_name: threenine-co-uk
+    api_key: 896994212468486
+collections:
+    - name: "posts"
+      identifier_field: title
+      label: "Posts"
+      folder: "content/posts"
+      format: 'frontmatter'
+      create: true
+      slug: "{{slug}}"
+      fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Subtitle", name: "subtitle", widget: "string", required: true}
+          - { label: "Description", name: "description", widget: "string", required: true}
+          - { label: "Category", name: "category", widget: "string", required: true }
+          - { label: "Summary" , name: "summary", widget: "text" }
+          - label: "Feature Image"
+            name: "featureImage"
+            widget: "object"
+            fields:
+              [
+               { label: "Url", name: "url", widget: "image" },
+               { label: "Title", name: "title", widget: "string" },
+              ]
+          - label: "Author"
+            name: "author"
+            widget: "relation"
+            collection: "authors"
+            search_fields: ["fullName"]
+            value_field: "username"
+            display_fields: ["fullName"]
+          - {label: "Publish Date", name: "publishDate", widget: "string" }
+          - {label: "Publish Date time", name: "publishDateTime", widget: "string" }
+          - {label: "Body", name: "body", widget: "markdown" }
+    - name: "authors"
+      identifier_field: username
+      label: "Authors"
+      folder: "content/authors"
+      format: 'frontmatter'
+      create: true
+      slug: "{{slug}}"
+      fields:
+        - { label: "Title", name: "title", widget: "string", required: true}
+        - { label: "Username", name: "username", widget: "string", required: true }
+        - { label: "Full name", name: "fullName", widget: "string", required: true }
+        - { label: "Role", name: "role", widget: "string", required: true }
+        - { label: "Image", name: "image", widget: "image", required: true }
+        - { label: "Profile", name: "profile", widget: "text", required: true }
+        - { label: "GitHub", name: "github", widget: "string", required: true }
+        - { label: "Nostr", name: "nostr", widget: "string", required: true }
+        - { label: "Bio", name: "body", widget: "markdown", required: true }
