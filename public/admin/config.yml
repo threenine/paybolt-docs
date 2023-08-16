@@ -25,7 +25,12 @@ collections:
           - { label: "Title", name: "title", widget: "string", required: true }
           - { label: "Subtitle", name: "subtitle", widget: "string", required: true}
           - { label: "Description", name: "description", widget: "string", required: true}
-          - { label: "Category", name: "category", widget: "string", required: true }
+          - { label: "Category",
+              name: "category",
+              widget: "select",
+              options: ["Introduction", "Guides", "Reference", "Troubleshooting"],
+              required: true
+          }
           - { label: "Summary" , name: "summary", widget: "text" }
           - {label: "Body", name: "body", widget: "markdown" }
     - name: "authors"
