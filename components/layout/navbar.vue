@@ -19,7 +19,7 @@
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-900 dark:text-gray-100 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
             </div>
           </div>
         </div>
@@ -38,13 +38,13 @@
             <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
               <MenuItems class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']"><Icon name="bxl:github" class="h-6 w-6" />Github</a>
+                  <a href="https://github.com/threenine/paybolt" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']"><Icon name="bxl:github" class="h-6 w-6" />Github</a>
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">Settings</a>
+                  <a href="https://threenine.slack.com/archives/C05N6R5049J" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']"><Icon name="uil:slack" class="h-6 w-6" />Slack Channel</a>
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">Sign out</a>
+                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']"><Icon name="ic:outline-insert-link" class="h-6 w-6" />Website</a>
                 </MenuItem>
               </MenuItems>
             </transition>
@@ -67,10 +67,9 @@ import ThemeSwitch from "~/components/layout/theme-switch.vue";
 
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Documentation', href: '#', current: true },
   { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Releases', href: '#', current: false },
 ]
 </script>
 Dark with quick action
