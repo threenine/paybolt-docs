@@ -14,10 +14,10 @@ media_library:
     cloud_name: threenine-co-uk
     api_key: 896994212468486
 collections:
-    - name: "posts"
+    - name: "documentation"
       identifier_field: title
-      label: "Posts"
-      folder: "content/posts"
+      label: "Documentation"
+      folder: "content/docs"
       format: 'frontmatter'
       create: true
       slug: "{{slug}}"
@@ -27,23 +27,6 @@ collections:
           - { label: "Description", name: "description", widget: "string", required: true}
           - { label: "Category", name: "category", widget: "string", required: true }
           - { label: "Summary" , name: "summary", widget: "text" }
-          - label: "Feature Image"
-            name: "featureImage"
-            widget: "object"
-            fields:
-              [
-               { label: "Url", name: "url", widget: "image" },
-               { label: "Title", name: "title", widget: "string" },
-              ]
-          - label: "Author"
-            name: "author"
-            widget: "relation"
-            collection: "authors"
-            search_fields: ["fullName"]
-            value_field: "username"
-            display_fields: ["fullName"]
-          - {label: "Publish Date", name: "publishDate", widget: "string" }
-          - {label: "Publish Date time", name: "publishDateTime", widget: "string" }
           - {label: "Body", name: "body", widget: "markdown" }
     - name: "authors"
       identifier_field: username
