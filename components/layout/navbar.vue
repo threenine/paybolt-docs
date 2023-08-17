@@ -68,9 +68,6 @@ import ThemeSwitch from "~/components/layout/theme-switch.vue";
 
 const navigation = [
   { name: 'Documentation', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
   { name: 'Releases', href: '#', current: false },
 ]
 </script>
-Dark with quick action
-Req
