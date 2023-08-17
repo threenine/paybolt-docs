@@ -14,7 +14,7 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <img class="h-8 w-auto" src="/PayBolt.png" alt="PayBolt"/>
+            <img class="h-8 w-auto" src="/PayBolt.svg" alt="PayBolt"/>
             <span class="text-orange text-3xl italic font-bold">PayBolt</span>
           </div>
           <div class="hidden sm:ml-6 sm:block">

@@ -43,7 +43,7 @@ const features = [
               </dl>
             </div>
           </div>
-          <img src="/PayBolt.png" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442" />
+          <img src="/PayBolt.svg" alt="PayBolt - Lightning Network Client" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442" />
         </div>
       </div>
     </div>
