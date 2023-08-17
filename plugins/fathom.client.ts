@@ -1,6 +1,8 @@
 import { defineNuxtPlugin } from '#app'
+// eslint-disable-next-line import/no-named-as-default
 import VueFathom from '@ubclaunchpad/vue-fathom'
-export default  defineNuxtPlugin((nuxtApp) => {
+// noinspection JSUnusedGlobalSymbols
+export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
   nuxtApp.vueApp.use(VueFathom, {
     siteID: config.public.fathom_analytics_id,
