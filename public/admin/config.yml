@@ -33,3 +33,16 @@ collections:
           }
           - { label: "Summary" , name: "summary", widget: "text" }
           - {label: "Body", name: "body", widget: "markdown" }
+    - name: "getting-started"
+      identifier_field: title
+      label: "Getting Started"
+      folder: "content/start"
+      format: 'frontmatter'
+      create: true
+      slug: "start-{{slug}}"
+      fields:
+        - { label: "Title", name: "title", widget: "string", required: true }
+        - { label: "Description", name: "description", widget: "string", required: true }
+        - { label: "order",  name: "order", widget: "number", required: true }
+        - { label: "Summary" , name: "summary", widget: "text" }
+        - { label: "Body", name: "body", widget: "markdown" }
