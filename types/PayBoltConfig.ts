@@ -27,7 +27,6 @@ export interface NuxtPayBoltAppConfig {
       website?: string
     }
   }
-
 }
 
 declare module '@nuxt/schema' {

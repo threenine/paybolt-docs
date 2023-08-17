@@ -5,7 +5,13 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules: [ '@nuxtjs/tailwindcss', '@nuxt/content',  '@nuxtjs/color-mode', 'nuxt-icon', 'nuxt-headlessui'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    'nuxt-icon',
+    'nuxt-headlessui',
+  ],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
@@ -14,7 +20,7 @@ export default defineNuxtConfig({
     componentName: 'ColorScheme',
     classPrefix: '',
     classSuffix: '',
-    storageKey: 'nuxt-color-mode'
+    storageKey: 'nuxt-color-mode',
   },
   headlessui: {
     prefix: 'Headless',
@@ -22,7 +28,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       fathom_analytics_id: process.env.fathom_analytics_id,
-      siteUrl: 'https://paybolt.dev'
-    }
+      siteUrl: 'https://paybolt.dev',
+    },
   },
 })

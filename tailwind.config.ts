@@ -1,4 +1,4 @@
-import type {Config} from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 
@@ -16,7 +16,7 @@ const PayBolt = {
       '700': '#c2410c',
       '800': '#9a3412',
       '900': '#7c2d12',
-      '950': '#431407'
+      '950': '#431407',
     },
     blue: {
       DEFAULT: '#0096FF',
@@ -56,7 +56,7 @@ export default <Partial<Config>>{
     `composables/**/*.{js,ts}`,
     `plugins/**/*.{js,ts}`,
     `App.{js,ts,vue}`,
-    `app.{js,ts,vue}`
+    `app.{js,ts,vue}`,
   ],
   theme: {
     extend: {
@@ -79,6 +79,6 @@ export default <Partial<Config>>{
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
-    require('@headlessui/tailwindcss')
-  ]
+    require('@headlessui/tailwindcss'),
+  ],
 }

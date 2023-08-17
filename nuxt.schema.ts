@@ -4,8 +4,7 @@ export default defineNuxtSchema({
   appConfig: {
     awesome: {
       name: 'PayBolt',
-      description:
-        'Dotnet C# Bitcoin Lightning Network Payment Client',
+      description: 'Dotnet C# Bitcoin Lightning Network Payment Client',
       project: {
         links: {
           github: 'https://github.com/threenine/paybolt',

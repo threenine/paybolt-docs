@@ -1,50 +1,115 @@
 <template>
-
-  <Disclosure as="nav" v-slot="{ open }">
+  <Disclosure v-slot="{ open }" as="nav">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
-          <DisclosureButton class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+          <DisclosureButton
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          >
             <span class="absolute -inset-0.5" />
             <span class="sr-only">Open main menu</span>
-            <Icon name="heroicons-solid:bars-3" v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-            <Icon name="heroicons-solid:bars-3" v-else class="block h-6 w-6" aria-hidden="true" />
+            <Icon
+              v-if="!open"
+              name="heroicons-solid:bars-3"
+              class="block h-6 w-6"
+              aria-hidden="true"
+            />
+            <Icon
+              v-else
+              name="heroicons-solid:bars-3"
+              class="block h-6 w-6"
+              aria-hidden="true"
+            />
           </DisclosureButton>
         </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div
+          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+        >
           <div class="flex flex-shrink-0 items-center">
-            <img class="h-8 w-auto" src="/PayBolt.svg" alt="PayBolt"/>
+            <img class="h-8 w-auto" src="/PayBolt.svg" alt="PayBolt" />
             <span class="text-orange text-3xl italic font-bold">PayBolt</span>
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-900 dark:text-gray-100 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+              <a
+                v-for="item in navigation"
+                :key="item.name"
+                :href="item.href"
+                :class="[
+                  item.current
+                    ? 'bg-gray-900 text-white'
+                    : 'text-gray-900 dark:text-gray-100 hover:bg-gray-700 hover:text-white',
+                  'rounded-md px-3 py-2 text-sm font-medium',
+                ]"
+                :aria-current="item.current ? 'page' : undefined"
+                >{{ item.name }}</a
+              >
             </div>
           </div>
         </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-         <theme-switch />
+        <div
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+        >
+          <LayoutThemeSwitch />
 
           <!-- Profile dropdown -->
           <Menu as="div" class="relative ml-3">
             <div>
-              <MenuButton class="relative flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              <MenuButton
+                class="relative flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              >
                 <span class="absolute -inset-1.5" />
                 <span class="sr-only">Open user menu</span>
-                <Icon name="mdi-light:comment" class="h-8 w-8 rounded-full text-typography_primary_light dark:text-typography_primary_dark" />
+                <Icon
+                  name="mdi-light:comment"
+                  class="h-8 w-8 rounded-full text-typography_primary_light dark:text-typography_primary_dark"
+                />
               </MenuButton>
             </div>
-            <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-              <MenuItems class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <transition
+              enter-active-class="transition ease-out duration-100"
+              enter-from-class="transform opacity-0 scale-95"
+              enter-to-class="transform opacity-100 scale-100"
+              leave-active-class="transition ease-in duration-75"
+              leave-from-class="transform opacity-100 scale-100"
+              leave-to-class="transform opacity-0 scale-95"
+            >
+              <MenuItems
+                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
                 <MenuItem v-slot="{ active }">
-                  <a href="https://github.com/threenine/paybolt" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']"><Icon name="bxl:github" class="h-6 w-6" />Github</a>
+                  <a
+                    href="https://github.com/threenine/paybolt"
+                    :class="[
+                      active ? 'bg-gray-100' : '',
+                      'block px-4 py-2 text-sm text-gray-700',
+                    ]"
+                    ><Icon name="bxl:github" class="h-6 w-6" />Github</a
+                  >
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
-                  <a href="https://threenine.slack.com/archives/C05N6R5049J" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']"><Icon name="uil:slack" class="h-6 w-6" />Slack Channel</a>
+                  <a
+                    href="https://threenine.slack.com/archives/C05N6R5049J"
+                    :class="[
+                      active ? 'bg-gray-100' : '',
+                      'block px-4 py-2 text-sm text-gray-700',
+                    ]"
+                    ><Icon name="uil:slack" class="h-6 w-6" />Slack Channel</a
+                  >
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']"><Icon name="ic:outline-insert-link" class="h-6 w-6" />Website</a>
+                  <a
+                    href="#"
+                    :class="[
+                      active ? 'bg-gray-100' : '',
+                      'block px-4 py-2 text-sm text-gray-700',
+                    ]"
+                    ><Icon
+                      name="ic:outline-insert-link"
+                      class="h-6 w-6"
+                    />Website</a
+                  >
                 </MenuItem>
               </MenuItems>
             </transition>
@@ -55,16 +120,36 @@
 
     <DisclosurePanel class="sm:hidden">
       <div class="space-y-1 px-2 pb-3 pt-2">
-        <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+        <DisclosureButton
+          v-for="item in navigation"
+          :key="item.name"
+          as="a"
+          :href="item.href"
+          :class="[
+            item.current
+              ? 'bg-gray-900 text-white'
+              : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+            'block rounded-md px-3 py-2 text-base font-medium',
+          ]"
+          :aria-current="item.current ? 'page' : undefined"
+          >{{ item.name }}</DisclosureButton
+        >
       </div>
     </DisclosurePanel>
   </Disclosure>
 </template>
 
 <script setup>
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import ThemeSwitch from "~/components/layout/theme-switch.vue";
-
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from '@headlessui/vue'
+import ThemeSwitch from '~/components/layout/theme/switch.vue'
 
 const navigation = [
   { name: 'Documentation', href: '#', current: true },
