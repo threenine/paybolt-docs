@@ -39,7 +39,7 @@ collections:
       folder: "content/start"
       format: 'frontmatter'
       create: true
-      slug: "start-{{slug}}"
+      slug: "{{slug}}"
       fields:
         - { label: "Title", name: "title", widget: "string", required: true }
         - { label: "Description", name: "description", widget: "string", required: true }

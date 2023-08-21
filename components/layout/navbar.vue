@@ -51,7 +51,7 @@
         <div
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
-          <LayoutThemeSwitch />
+          <layout-theme-switch />
 
           <!-- Profile dropdown -->
           <Menu as="div" class="relative ml-3">
@@ -85,7 +85,9 @@
                       active ? 'bg-gray-100' : '',
                       'block px-4 py-2 text-sm text-gray-700',
                     ]"
-                    ><Icon name="bxl:github" class="h-6 w-6" />Github</a
+                  >
+                    <Icon name="bxl:github" class="h-6 w-6" />
+                    Github</a
                   >
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
@@ -95,7 +97,9 @@
                       active ? 'bg-gray-100' : '',
                       'block px-4 py-2 text-sm text-gray-700',
                     ]"
-                    ><Icon name="uil:slack" class="h-6 w-6" />Slack Channel</a
+                  >
+                    <Icon name="uil:slack" class="h-6 w-6" />
+                    Slack Channel</a
                   >
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
@@ -105,10 +109,9 @@
                       active ? 'bg-gray-100' : '',
                       'block px-4 py-2 text-sm text-gray-700',
                     ]"
-                    ><Icon
-                      name="ic:outline-insert-link"
-                      class="h-6 w-6"
-                    />Website</a
+                  >
+                    <Icon name="ic:outline-insert-link" class="h-6 w-6" />
+                    Website</a
                   >
                 </MenuItem>
               </MenuItems>
@@ -132,8 +135,8 @@
             'block rounded-md px-3 py-2 text-base font-medium',
           ]"
           :aria-current="item.current ? 'page' : undefined"
-          >{{ item.name }}</DisclosureButton
-        >
+          >{{ item.name }}
+        </DisclosureButton>
       </div>
     </DisclosurePanel>
   </Disclosure>
