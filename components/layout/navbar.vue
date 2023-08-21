@@ -51,8 +51,7 @@
         <div
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
-          <layout-theme-switch />
-
+          <Switch />
           <!-- Profile dropdown -->
           <Menu as="div" class="relative ml-3">
             <div>
@@ -152,8 +151,7 @@ import {
   MenuItem,
   MenuItems,
 } from '@headlessui/vue'
-import ThemeSwitch from '~/components/layout/theme/switch.vue'
-
+import Switch from '~/components/layout/switch.vue'
 const navigation = [
   { name: 'Documentation', href: '#', current: true },
   { name: 'Releases', href: '#', current: false },
