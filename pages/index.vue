@@ -19,7 +19,7 @@ const features = [
   {
     name: 'Dotnet',
     description:
-      'Develop Lightning Network based apps in C#. Provides a common abstraction supporting many implementations.',
+      'a free, cross-platform, open source developer platform for building many different types of applications. With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, games, IoT, and more. Languages You can write .NET apps in C#, F#, or Visual Basic',
     icon: 'simple-icons:dotnet',
   },
 ]
@@ -33,9 +33,6 @@ const features = [
       >
         <div class="lg:pr-8 lg:pt-4">
           <div class="lg:max-w-lg">
-            <h2 class="text-base font-semibold leading-7 text-orange-600">
-              Bitcoin
-            </h2>
             <p
               class="mt-2 text-3xl font-bold tracking-tight text-orange sm:text-4xl"
             >
@@ -64,6 +61,12 @@ const features = [
                 <dd class="inline">{{ feature.description }}</dd>
               </div>
             </dl>
+            <p class="mt-6 text-lg leading-8 dark:text-gray-200 text-gray-600">
+              PayBolt is a convenient starting point for developing .NET based
+              applications to utilise the power and flexibility of the Lightning
+              network to integrate Bitcoin Smart Contracts and payment
+              processing within your Dotnet Applications.
+            </p>
           </div>
         </div>
         <img
