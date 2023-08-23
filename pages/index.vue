@@ -3,22 +3,24 @@ definePageMeta({ layout: 'default' })
 
 const features = [
   {
+    name: 'Bitcoin',
+    description:
+      'a virtual currency designed to act as money and a form of payment outside the control of any one person, group, ' +
+      'or entity, thus removing the need for third-party involvement in financial transactions.',
+    icon: 'simple-icons:bitcoin',
+  },
+  {
+    name: 'Lightning Network',
+    description:
+      'The Lightning Network is a peer-to-peer payment network. It leverages payment channels anchored on the Bitcoin ' +
+      'blockchain to enable near instant and low-cost settlement of bitcoin between participants',
+    icon: 'icon-park-outline:lightning',
+  },
+  {
     name: 'Dotnet',
     description:
       'Develop Lightning Network based apps in C#. Provides a common abstraction supporting many implementations.',
     icon: 'simple-icons:dotnet',
-  },
-  {
-    name: 'SSL certificates.',
-    description:
-      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: 'heroicons:lock-closed',
-  },
-  {
-    name: 'Database backups.',
-    description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: 'heroicons:server',
   },
 ]
 </script>
@@ -67,7 +69,7 @@ const features = [
         <img
           src="/PayBolt.svg"
           alt="PayBolt - Lightning Network Client"
-          class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 p-5"
+          class="w-[24rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 p-5"
         />
       </div>
     </div>
