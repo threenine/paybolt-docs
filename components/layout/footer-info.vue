@@ -19,11 +19,11 @@
           class="text-center text-xs leading-5 text-gray-900 dark:text-gray-100"
         >
           <nuxt-link
-            to="https://find-and-update.company-information.service.gov.uk/company/05608093"
+            to="https://threenine.co.uk"
             class="mt-8 text-base text-gray-900 dark:text-gray-100 md:order-1 md:mt-0"
             >&copy {{ new Date().getFullYear() }}
-            THREENINE CONSULTING LIMITED registered in England & Wales 05608093
-            VAT no. GB 900383850
+            threenine.co.uk registered in England & Wales 05608093 VAT no. GB
+            900383850
           </nuxt-link>
         </p>
       </div>
