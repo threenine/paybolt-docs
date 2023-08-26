@@ -5,8 +5,8 @@ const features = [
   {
     name: 'Bitcoin',
     description:
-      'a virtual currency designed to act as money and a form of payment outside the control of any one person, group, ' +
-      'or entity, thus removing the need for third-party involvement in financial transactions.',
+      'a virtual currency & financial protocol designed to act as money and a form of payment outside the control of any one person, group, ' +
+      'or entity, thus removing the need for any third-party involvement in financial transactions, enabling Trustless cross border Payments without the need for third party intervention or control',
     icon: 'simple-icons:bitcoin',
   },
   {
@@ -39,7 +39,7 @@ const features = [
               PayBolt
             </p>
             <p class="mt-6 text-lg leading-8 dark:text-gray-200 text-gray-600">
-              Lightning Network Client
+              DotNet C# Lightning Network Client for developing Lightning Dapps
             </p>
             <dl
               class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-800 dark:text-gray-100 lg:max-w-none"

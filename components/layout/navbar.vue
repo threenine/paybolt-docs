@@ -61,7 +61,7 @@
                 <span class="absolute -inset-1.5" />
                 <span class="sr-only">Open user menu</span>
                 <Icon
-                  name="mdi-light:comment"
+                  name="ri:feedback-line"
                   class="h-8 w-8 rounded-full text-typography_primary_light dark:text-typography_primary_dark"
                 />
               </MenuButton>
